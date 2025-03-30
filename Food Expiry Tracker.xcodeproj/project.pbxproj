@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		34C6844B2D98E54A001ECF36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C684322D98E549001ECF36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C684392D98E549001ECF36;
+			remoteInfo = "Food Expiry Tracker";
+		};
+		34C684552D98E54A001ECF36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34C684322D98E549001ECF36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C684392D98E549001ECF36;
+			remoteInfo = "Food Expiry Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34C6843A2D98E549001ECF36 /* Food Expiry Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Expiry Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C6844A2D98E54A001ECF36 /* Food Expiry TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food Expiry TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C684542D98E54A001ECF36 /* Food Expiry TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food Expiry TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		34C6843C2D98E549001ECF36 /* Food Expiry Tracker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Food Expiry Tracker";
+			sourceTree = "<group>";
+		};
+		34C6844D2D98E54A001ECF36 /* Food Expiry TrackerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Food Expiry TrackerTests";
+			sourceTree = "<group>";
+		};
+		34C684572D98E54A001ECF36 /* Food Expiry TrackerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Food Expiry TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34C684372D98E549001ECF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C684472D98E54A001ECF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C684512D98E54A001ECF36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34C684312D98E549001ECF36 = {
+			isa = PBXGroup;
+			children = (
+				34C6843C2D98E549001ECF36 /* Food Expiry Tracker */,
+				34C6844D2D98E54A001ECF36 /* Food Expiry TrackerTests */,
+				34C684572D98E54A001ECF36 /* Food Expiry TrackerUITests */,
+				34C6843B2D98E549001ECF36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34C6843B2D98E549001ECF36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C6843A2D98E549001ECF36 /* Food Expiry Tracker.app */,
+				34C6844A2D98E54A001ECF36 /* Food Expiry TrackerTests.xctest */,
+				34C684542D98E54A001ECF36 /* Food Expiry TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34C684392D98E549001ECF36 /* Food Expiry Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C6845E2D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry Tracker" */;
+			buildPhases = (
+				34C684362D98E549001ECF36 /* Sources */,
+				34C684372D98E549001ECF36 /* Frameworks */,
+				34C684382D98E549001ECF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				34C6843C2D98E549001ECF36 /* Food Expiry Tracker */,
+			);
+			name = "Food Expiry Tracker";
+			packageProductDependencies = (
+			);
+			productName = "Food Expiry Tracker";
+			productReference = 34C6843A2D98E549001ECF36 /* Food Expiry Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34C684492D98E54A001ECF36 /* Food Expiry TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C684612D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry TrackerTests" */;
+			buildPhases = (
+				34C684462D98E54A001ECF36 /* Sources */,
+				34C684472D98E54A001ECF36 /* Frameworks */,
+				34C684482D98E54A001ECF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34C6844C2D98E54A001ECF36 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				34C6844D2D98E54A001ECF36 /* Food Expiry TrackerTests */,
+			);
+			name = "Food Expiry TrackerTests";
+			packageProductDependencies = (
+			);
+			productName = "Food Expiry TrackerTests";
+			productReference = 34C6844A2D98E54A001ECF36 /* Food Expiry TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		34C684532D98E54A001ECF36 /* Food Expiry TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C684642D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry TrackerUITests" */;
+			buildPhases = (
+				34C684502D98E54A001ECF36 /* Sources */,
+				34C684512D98E54A001ECF36 /* Frameworks */,
+				34C684522D98E54A001ECF36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34C684562D98E54A001ECF36 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				34C684572D98E54A001ECF36 /* Food Expiry TrackerUITests */,
+			);
+			name = "Food Expiry TrackerUITests";
+			packageProductDependencies = (
+			);
+			productName = "Food Expiry TrackerUITests";
+			productReference = 34C684542D98E54A001ECF36 /* Food Expiry TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34C684322D98E549001ECF36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					34C684392D98E549001ECF36 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					34C684492D98E54A001ECF36 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 34C684392D98E549001ECF36;
+					};
+					34C684532D98E54A001ECF36 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 34C684392D98E549001ECF36;
+					};
+				};
+			};
+			buildConfigurationList = 34C684352D98E549001ECF36 /* Build configuration list for PBXProject "Food Expiry Tracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34C684312D98E549001ECF36;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 34C6843B2D98E549001ECF36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34C684392D98E549001ECF36 /* Food Expiry Tracker */,
+				34C684492D98E54A001ECF36 /* Food Expiry TrackerTests */,
+				34C684532D98E54A001ECF36 /* Food Expiry TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34C684382D98E549001ECF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C684482D98E54A001ECF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C684522D98E54A001ECF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34C684362D98E549001ECF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C684462D98E54A001ECF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34C684502D98E54A001ECF36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34C6844C2D98E54A001ECF36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C684392D98E549001ECF36 /* Food Expiry Tracker */;
+			targetProxy = 34C6844B2D98E54A001ECF36 /* PBXContainerItemProxy */;
+		};
+		34C684562D98E54A001ECF36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C684392D98E549001ECF36 /* Food Expiry Tracker */;
+			targetProxy = 34C684552D98E54A001ECF36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34C6845C2D98E54A001ECF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34C6845D2D98E54A001ECF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34C6845F2D98E54A001ECF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Food Expiry Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34C684602D98E54A001ECF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Food Expiry Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34C684622D98E54A001ECF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Expiry Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Food Expiry Tracker";
+			};
+			name = Debug;
+		};
+		34C684632D98E54A001ECF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Expiry Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Food Expiry Tracker";
+			};
+			name = Release;
+		};
+		34C684652D98E54A001ECF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Food Expiry Tracker";
+			};
+			name = Debug;
+		};
+		34C684662D98E54A001ECF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Food Expiry Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34C684352D98E549001ECF36 /* Build configuration list for PBXProject "Food Expiry Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C6845C2D98E54A001ECF36 /* Debug */,
+				34C6845D2D98E54A001ECF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C6845E2D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C6845F2D98E54A001ECF36 /* Debug */,
+				34C684602D98E54A001ECF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C684612D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C684622D98E54A001ECF36 /* Debug */,
+				34C684632D98E54A001ECF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C684642D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34C684652D98E54A001ECF36 /* Debug */,
+				34C684662D98E54A001ECF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34C684322D98E549001ECF36 /* Project object */;
+}
