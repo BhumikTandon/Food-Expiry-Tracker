@@ -44,6 +44,7 @@ Food Expiry Tracker is an iOS application designed to help users manage their gr
 - A valid API key for the recipe suggestion service (e.g., Spoonacular)
 
 ##Dependencies 
+
 https://github.com/parse-community/Parse-Swift
 
 
