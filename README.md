@@ -75,6 +75,10 @@ This project uses the Parse-Swift library for handling the backend interactions.
 Parse-Swift: Parse SDK for Swift, used for managing authentication and data persistence.
 To install Parse-Swift, follow the instructions above to use Swift Package Manager
 
+Contributions:
+Backend: Bhumik Tandon, Anula Dinesh
+Frontend: Bhumik Tandon and Ishanshika Arora
+Back4app and Logo Design: Ishanshika Arora
 
    
    
