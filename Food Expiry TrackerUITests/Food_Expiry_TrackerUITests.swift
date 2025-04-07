@@ -2,7 +2,7 @@
 //  Food_Expiry_TrackerUITests.swift
 //  Food Expiry TrackerUITests
 //
-//  Created by Bhumik Tandon on 3/30/25.
+//  Created by Bhumik Tandon, Ishanshika Arora and Anula Dinesh on 3/30/25.
 //
 
 import XCTest
@@ -14,7 +14,6 @@ final class Food_Expiry_TrackerUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
