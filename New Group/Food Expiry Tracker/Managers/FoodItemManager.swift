@@ -4,71 +4,54 @@
 //
 //  Created by Bhumik Tandon on 3/29/25.
 //
-
-import SwiftUI
+import Foundation
 import ParseSwift
+import Combine
 
 class FoodItemManager: ObservableObject {
-    @Published var foodItems: [FoodItem] = []
-    @Published var errorMessage: String = ""
+    static let shared = FoodItemManager()
     
-    // MARK: - Fetch All Food Items (Fetch all items associated with the current user)
+    @Published var foodItems: [FoodItem] = []
+    @Published var errorMessage: String?
+
     func fetchFoodItems() {
         guard let currentUser = MyUser.current else {
-            self.errorMessage = "You must be logged in to view food items."
+            self.errorMessage = "User not logged in."
             return
         }
-        
-        // Query food items for the current user
-        let query = FoodItem.query("user" == currentUser)
-        query.find { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let items):
-                    self?.foodItems = items
-                case .failure(let error):
-                    self?.errorMessage = error.localizedDescription
+
+        do {
+            // Convert current user to a Parse Pointer to match the database schema
+            let userPointer = try currentUser.toPointer()
+            let query = FoodItem.query("user" == userPointer)
+            
+            query.find { [weak self] result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let items):
+                        print("✅ Successfully fetched \(items.count) food items.")
+                        self?.foodItems = items
+                    case .failure(let error):
+                        print("❌ Fetch Error: \(error.localizedDescription)")
+                        self?.errorMessage = error.localizedDescription
+                    }
                 }
             }
+        } catch {
+            print("❌ Pointer conversion error: \(error.localizedDescription)")
+            self.errorMessage = error.localizedDescription
         }
     }
-    
-    // MARK: - Add New Food Item
-    func addFoodItem(name: String, expiryDate: Date, quantity: Int) {
-        guard let currentUser = MyUser.current else {
-            self.errorMessage = "You must be logged in to add food items."
-            return
-        }
-        
-        var foodItem = FoodItem()
-        foodItem.name = name
-        foodItem.expiryDate = expiryDate
-        foodItem.quantity = quantity
-        foodItem.user = currentUser
-        
-        // Save the new food item
-        foodItem.save { [weak self] result in
+
+    func deleteFoodItem(_ item: FoodItem) {
+        item.delete { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    // After saving, fetch the updated list
-                    self?.fetchFoodItems()
+                    print("✅ Item deleted successfully.")
+                    self?.foodItems.removeAll { $0.objectId == item.objectId }
                 case .failure(let error):
-                    self?.errorMessage = error.localizedDescription
-                }
-            }
-        }
-    }
-    
-    // MARK: - Delete Food Item
-    func deleteFoodItem(_ foodItem: FoodItem) {
-        foodItem.delete { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    // After deletion, fetch the updated list
-                    self?.fetchFoodItems()
-                case .failure(let error):
+                    print("❌ Delete Error: \(error.localizedDescription)")
                     self?.errorMessage = error.localizedDescription
                 }
             }

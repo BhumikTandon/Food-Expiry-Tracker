@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3072E8B4BC1B43BA64A42952 /* Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3160A6DF899560A88EAD45 /* Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework */; };
-		5C2CB0604D4F1D9CF252A4FA /* Pods_Food_Expiry_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17FE38BEC1327605A9748FA /* Pods_Food_Expiry_Tracker.framework */; };
-		A8F2980F608475490A90039C /* Pods_Food_Expiry_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00D3EDA91184D28C6E2062E /* Pods_Food_Expiry_TrackerTests.framework */; };
+		63D3FC21308B36ED0087084A /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63D3FC20308B36ED0087084A /* ParseSwift */; };
+		63D3FC2D308B41B80087084A /* SpoonacularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3FC2C308B41B80087084A /* SpoonacularService.swift */; };
+		63D3FC2E308B41B80087084A /* SpoonacularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3FC2C308B41B80087084A /* SpoonacularService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 		58A191DC85FA8DAA514FEB00 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5FBD3B8C977FA710772483D0 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6258473C8C2C64F020BD77E2 /* Pods-Food Expiry Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker/Pods-Food Expiry Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		63D3FC2C308B41B80087084A /* SpoonacularService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpoonacularService.swift; path = "New Group/Food Expiry Tracker/Views/SpoonacularService.swift"; sourceTree = "<group>"; };
 		7D3160A6DF899560A88EAD45 /* Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3D61D53C5F492737A40597 /* Pods-Food Expiry TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Food Expiry TrackerTests/Pods-Food Expiry TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E00D3EDA91184D28C6E2062E /* Pods_Food_Expiry_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Expiry_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +45,30 @@
 		F17FE38BEC1327605A9748FA /* Pods_Food_Expiry_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Expiry_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		63D3FC1F308B34D20087084A /* Exceptions for "Food Expiry Tracker" folder in "Food Expiry Tracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FoodExpiryTrackerTests.swift,
+			);
+			target = 34C684392D98E549001ECF36 /* Food Expiry Tracker */;
+		};
+		63D3FC34308B41E80087084A /* Exceptions for "Food Expiry Tracker" folder in "Food Expiry TrackerTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Views/RecipesView.swift,
+			);
+			target = 34C684492D98E54A001ECF36 /* Food Expiry TrackerTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		34C6843C2D98E549001ECF36 /* Food Expiry Tracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				63D3FC1F308B34D20087084A /* Exceptions for "Food Expiry Tracker" folder in "Food Expiry Tracker" target */,
+				63D3FC34308B41E80087084A /* Exceptions for "Food Expiry Tracker" folder in "Food Expiry TrackerTests" target */,
+			);
 			path = "Food Expiry Tracker";
 			sourceTree = "<group>";
 		};
@@ -67,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2CB0604D4F1D9CF252A4FA /* Pods_Food_Expiry_Tracker.framework in Frameworks */,
+				63D3FC21308B36ED0087084A /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8F2980F608475490A90039C /* Pods_Food_Expiry_TrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3072E8B4BC1B43BA64A42952 /* Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +126,7 @@
 		34C684312D98E549001ECF36 = {
 			isa = PBXGroup;
 			children = (
+				63D3FC2C308B41B80087084A /* SpoonacularService.swift */,
 				34C6846E2D9901FA001ECF36 /* New Group */,
 				34C6844D2D98E54A001ECF36 /* Food Expiry TrackerTests */,
 				34C684572D98E54A001ECF36 /* Food Expiry TrackerUITests */,
@@ -150,11 +171,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C6845E2D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry Tracker" */;
 			buildPhases = (
-				8DACA662FC702F37427793DC /* [CP] Check Pods Manifest.lock */,
 				34C684362D98E549001ECF36 /* Sources */,
 				34C684372D98E549001ECF36 /* Frameworks */,
 				34C684382D98E549001ECF36 /* Resources */,
-				07DA712FB7534D84B5DFD480 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +183,9 @@
 				34C6843C2D98E549001ECF36 /* Food Expiry Tracker */,
 			);
 			name = "Food Expiry Tracker";
+			packageProductDependencies = (
+				63D3FC20308B36ED0087084A /* ParseSwift */,
+			);
 			productName = "Food Expiry Tracker";
 			productReference = 34C6843A2D98E549001ECF36 /* Food Expiry Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -172,7 +194,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C684612D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry TrackerTests" */;
 			buildPhases = (
-				CB5AA9477CE4825876421538 /* [CP] Check Pods Manifest.lock */,
 				34C684462D98E54A001ECF36 /* Sources */,
 				34C684472D98E54A001ECF36 /* Frameworks */,
 				34C684482D98E54A001ECF36 /* Resources */,
@@ -194,11 +215,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C684642D98E54A001ECF36 /* Build configuration list for PBXNativeTarget "Food Expiry TrackerUITests" */;
 			buildPhases = (
-				E05C8D5E72CABCDD0B6628C1 /* [CP] Check Pods Manifest.lock */,
 				34C684502D98E54A001ECF36 /* Sources */,
 				34C684512D98E54A001ECF36 /* Frameworks */,
 				34C684522D98E54A001ECF36 /* Resources */,
-				E2B7651C9FF8F17675B9C7DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,9 +238,9 @@
 		34C684322D98E549001ECF36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = NO;
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					34C684392D98E549001ECF36 = {
 						CreatedOnToolsVersion = 16.2;
@@ -284,114 +303,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		07DA712FB7534D84B5DFD480 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Food Expiry Tracker/Pods-Food Expiry Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Food Expiry Tracker/Pods-Food Expiry Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Food Expiry Tracker/Pods-Food Expiry Tracker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DACA662FC702F37427793DC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Food Expiry Tracker-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB5AA9477CE4825876421538 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Food Expiry TrackerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E05C8D5E72CABCDD0B6628C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Food Expiry Tracker-Food Expiry TrackerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2B7651C9FF8F17675B9C7DD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		34C684362D98E549001ECF36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D3FC2E308B41B80087084A /* SpoonacularService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D3FC2D308B41B80087084A /* SpoonacularService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +378,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -483,6 +402,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -524,6 +444,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P7BDN2FTB6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -540,6 +461,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
@@ -548,14 +470,12 @@
 		};
 		34C6845F2D98E54A001ECF36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6258473C8C2C64F020BD77E2 /* Pods-Food Expiry Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Food Expiry Tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -563,6 +483,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,14 +499,12 @@
 		};
 		34C684602D98E54A001ECF36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EB87DB7E371198EA75636D0 /* Pods-Food Expiry Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Food Expiry Tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = P7BDN2FTB6;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -593,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,14 +528,12 @@
 		};
 		34C684622D98E54A001ECF36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E21993C6D052274711F867A7 /* Pods-Food Expiry TrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P7BDN2FTB6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -628,14 +546,12 @@
 		};
 		34C684632D98E54A001ECF36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD3D61D53C5F492737A40597 /* Pods-Food Expiry TrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P7BDN2FTB6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,12 +564,11 @@
 		};
 		34C684652D98E54A001ECF36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FBD3B8C977FA710772483D0 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P7BDN2FTB6;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,12 +581,11 @@
 		};
 		34C684662D98E54A001ECF36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58A191DC85FA8DAA514FEB00 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P7BDN2FTB6;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Bhumik-Tandon.Food-Expiry-TrackerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -733,6 +647,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63D3FC20308B36ED0087084A /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34C684832D99035F001ECF36 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34C684322D98E549001ECF36 /* Project object */;
 }

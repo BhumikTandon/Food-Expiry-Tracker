@@ -4,26 +4,24 @@
 //
 //  Created by Bhumik Tandon on 3/29/25.
 //
-
 import Foundation
 import ParseSwift
 
 struct MyUser: ParseUser {
-    // Required ParseUser fields
-    var originalData: Data?
+    // MARK: - Required ParseObject Properties
     var objectId: String?
     var createdAt: Date?
     var updatedAt: Date?
     var ACL: ParseACL?
-    
+    var originalData: Data?
+
+    // MARK: - Required ParseUser Properties
     var username: String?
+    var password: String?
     var email: String?
-    var password: String?  // You might not need this since Parse handles password management internally
+    var emailVerified: Bool?
+    var authData: [String: [String: String]?]?
 
-    // Custom fields
-    var fullName: String? // Add custom fields as needed
-    var favoriteColor: String?
-
-    // A simple init if you need it
-    init() { }
+    // MARK: - Custom User Properties
+    // Add any custom fields here (e.g., var profileImage: ParseFile?)
 }

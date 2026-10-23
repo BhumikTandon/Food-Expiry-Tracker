@@ -3,25 +3,36 @@
 //  Food Expiry Tracker
 //
 //  Created by Bhumik Tandon on 3/29/25.
-//
+
 
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var authManager: AuthManager
-    
+    @StateObject private var foodManager = FoodItemManager.shared
+
     var body: some View {
-        VStack(spacing: 16) {
-            Text("Welcome, \(MyUser.current?.username ?? "User")!")
-                .font(.title2)
-            
-            NavigationLink("View My Food Items", destination: FoodItemListView())
-            
-            Button("Logout") {
-                authManager.logout()
-            }
-            .buttonStyle(.borderedProminent)
+        TabView {
+            FoodItemListView()
+                .tabItem {
+                    Label("My Fridge", systemImage: "refrigerator")
+                }
+
+            ExpiryAnalyticsView()
+                .tabItem {
+                    Label("Analytics", systemImage: "chart.pie.fill")
+                }
+
+            // 🍳 Added Recipes Tab Here
+            RecipesView()
+                .tabItem {
+                    Label("Recipes", systemImage: "fork.knife")
+                }
+
+            ProfileSettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }
         }
-        .navigationBarHidden(true)
+        .environmentObject(foodManager)
     }
 }
