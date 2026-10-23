@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		63D3FC21308B36ED0087084A /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63D3FC20308B36ED0087084A /* ParseSwift */; };
-		63D3FC2D308B41B80087084A /* SpoonacularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3FC2C308B41B80087084A /* SpoonacularService.swift */; };
-		63D3FC2E308B41B80087084A /* SpoonacularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3FC2C308B41B80087084A /* SpoonacularService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,18 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EB87DB7E371198EA75636D0 /* Pods-Food Expiry Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker.release.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker/Pods-Food Expiry Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		34C6843A2D98E549001ECF36 /* Food Expiry Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Expiry Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C6844A2D98E54A001ECF36 /* Food Expiry TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food Expiry TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C684542D98E54A001ECF36 /* Food Expiry TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food Expiry TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		58A191DC85FA8DAA514FEB00 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5FBD3B8C977FA710772483D0 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker-Food Expiry TrackerUITests/Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6258473C8C2C64F020BD77E2 /* Pods-Food Expiry Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Food Expiry Tracker/Pods-Food Expiry Tracker.debug.xcconfig"; sourceTree = "<group>"; };
-		63D3FC2C308B41B80087084A /* SpoonacularService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpoonacularService.swift; path = "New Group/Food Expiry Tracker/Views/SpoonacularService.swift"; sourceTree = "<group>"; };
 		7D3160A6DF899560A88EAD45 /* Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Expiry_Tracker_Food_Expiry_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3D61D53C5F492737A40597 /* Pods-Food Expiry TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Food Expiry TrackerTests/Pods-Food Expiry TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E00D3EDA91184D28C6E2062E /* Pods_Food_Expiry_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Expiry_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E21993C6D052274711F867A7 /* Pods-Food Expiry TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food Expiry TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Food Expiry TrackerTests/Pods-Food Expiry TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F17FE38BEC1327605A9748FA /* Pods_Food_Expiry_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food_Expiry_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,28 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C5B193227C9EC1878D07D86 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6258473C8C2C64F020BD77E2 /* Pods-Food Expiry Tracker.debug.xcconfig */,
-				0EB87DB7E371198EA75636D0 /* Pods-Food Expiry Tracker.release.xcconfig */,
-				5FBD3B8C977FA710772483D0 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.debug.xcconfig */,
-				58A191DC85FA8DAA514FEB00 /* Pods-Food Expiry Tracker-Food Expiry TrackerUITests.release.xcconfig */,
-				E21993C6D052274711F867A7 /* Pods-Food Expiry TrackerTests.debug.xcconfig */,
-				CD3D61D53C5F492737A40597 /* Pods-Food Expiry TrackerTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		34C684312D98E549001ECF36 = {
 			isa = PBXGroup;
 			children = (
-				63D3FC2C308B41B80087084A /* SpoonacularService.swift */,
-				34C6846E2D9901FA001ECF36 /* New Group */,
+				34C6843C2D98E549001ECF36 /* Food Expiry Tracker */,
 				34C6844D2D98E54A001ECF36 /* Food Expiry TrackerTests */,
 				34C684572D98E54A001ECF36 /* Food Expiry TrackerUITests */,
 				34C6843B2D98E549001ECF36 /* Products */,
-				1C5B193227C9EC1878D07D86 /* Pods */,
 				7DE6168951E5A4F0C0422D6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -144,14 +120,6 @@
 				34C684542D98E54A001ECF36 /* Food Expiry TrackerUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		34C6846E2D9901FA001ECF36 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				34C6843C2D98E549001ECF36 /* Food Expiry Tracker */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		7DE6168951E5A4F0C0422D6C /* Frameworks */ = {
@@ -308,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D3FC2E308B41B80087084A /* SpoonacularService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D3FC2D308B41B80087084A /* SpoonacularService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
