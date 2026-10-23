@@ -1,4 +1,4 @@
-cat << 'EOF' > README.md
+
 # 🍏 Food Expiry Tracker & Recipe Discovery (iOS)
 
 A native iOS application designed to track household food inventory, reduce kitchen waste through expiration analytics, and generate intelligent recipe recommendations using current inventory.
