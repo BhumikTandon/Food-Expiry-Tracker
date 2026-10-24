@@ -14,6 +14,12 @@ struct RecipesView: View {
     @State private var selectedRecipe: SpoonacularRecipe? = nil
     @State private var isLoading = false
     @State private var errorMessage: String? = nil
+    @State private var lastQuery: [String] = []
+
+    /// Non-expired items, soonest expiry first, capped. These drive the suggestions.
+    private var ingredients: [String] {
+        FoodItemManager.recipeIngredients(from: foodManager.foodItems)
+    }
 
     var body: some View {
         NavigationStack {
@@ -55,7 +61,7 @@ struct RecipesView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        Task { await fetchRecipes() }
+                        Task { await fetchRecipes(force: true) }
                     } label: {
                         Image(systemName: "arrow.clockwise")
                     }
@@ -65,35 +71,43 @@ struct RecipesView: View {
             .sheet(item: $selectedRecipe) { recipe in
                 SpoonacularDetailSheet(recipe: recipe)
             }
-            .onAppear {
-                if recipes.isEmpty {
-                    Task { await fetchRecipes() }
-                }
+            // Runs when the tab appears and again whenever the ingredient list changes.
+            .task(id: ingredients) {
+                await fetchRecipes(force: false)
             }
         }
     }
 
-    private func fetchRecipes() async {
-        let ingredientNames = foodManager.foodItems.compactMap { $0.name }.filter { !$0.isEmpty }
-        guard !ingredientNames.isEmpty else {
-            self.recipes = []
+    @MainActor
+    private func fetchRecipes(force: Bool) async {
+        let names = ingredients
+        guard !names.isEmpty else {
+            recipes = []
+            errorMessage = nil
+            lastQuery = []
             return
         }
 
+        // Skip the network call when nothing changed, to save the daily API quota.
+        if !force && names == lastQuery && !recipes.isEmpty { return }
+
         isLoading = true
         errorMessage = nil
+        defer { isLoading = false }
 
         do {
-            let fetched = try await SpoonacularService.shared.searchByIngredients(ingredientNames)
-            DispatchQueue.main.async {
-                self.recipes = fetched
-                self.isLoading = false
-            }
+            recipes = try await SpoonacularService.shared.searchByIngredients(names)
+            lastQuery = names
+        } catch is CancellationError {
+            return
+        } catch let urlError as URLError where urlError.code == .cancelled {
+            return
+        } catch let urlError as URLError {
+            errorMessage = urlError.code == .notConnectedToInternet
+                ? "No internet connection."
+                : "Network problem. Please try again."
         } catch {
-            DispatchQueue.main.async {
-                self.errorMessage = "Could not connect to Spoonacular. Verify your API key."
-                self.isLoading = false
-            }
+            errorMessage = error.localizedDescription
         }
     }
 }

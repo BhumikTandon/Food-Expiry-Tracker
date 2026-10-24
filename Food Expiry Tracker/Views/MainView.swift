@@ -34,5 +34,8 @@ struct MainView: View {
                 }
         }
         .environmentObject(foodManager)
+        .task {
+            await NotificationManager.shared.requestAuthorization()
+        }
     }
 }

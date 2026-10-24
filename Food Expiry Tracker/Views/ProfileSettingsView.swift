@@ -8,6 +8,8 @@ import SwiftUI
 import ParseSwift
 
 struct ProfileSettingsView: View {
+    @EnvironmentObject private var authManager: AuthManager
+
     var currentUser: MyUser? {
         MyUser.current
     }
@@ -31,7 +33,9 @@ struct ProfileSettingsView: View {
                 }
 
                 Section {
-                    Button(role: .destructive, action: logoutUser) {
+                    Button(role: .destructive) {
+                        authManager.logout()
+                    } label: {
                         HStack {
                             Spacer()
                             Text("Log Out")
@@ -39,22 +43,15 @@ struct ProfileSettingsView: View {
                             Spacer()
                         }
                     }
+
+                    if !authManager.errorMessage.isEmpty {
+                        Text(authManager.errorMessage)
+                            .font(.caption)
+                            .foregroundColor(.red)
+                    }
                 }
             }
             .navigationTitle("Settings")
-        }
-    }
-
-    private func logoutUser() {
-        MyUser.logout { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    print("User logged out successfully")
-                case .failure(let error):
-                    print("Logout error: \(error.localizedDescription)")
-                }
-            }
         }
     }
 }

@@ -5,9 +5,6 @@
 //  Created by Ishanshika Arora on 10/23/26.
 //
 
-//  SpoonacularService.swift
-//  Food Expiry Tracker
-
 import Foundation
 
 // MARK: - Spoonacular Data Models
@@ -46,48 +43,81 @@ struct InstructionStep: Codable, Identifiable {
     let step: String
 }
 
+// MARK: - Errors
+
+enum SpoonacularError: LocalizedError {
+    case missingAPIKey
+    case badStatus(Int)
+
+    var errorDescription: String? {
+        switch self {
+        case .missingAPIKey:
+            return "Add your Spoonacular API key to Secrets.swift."
+        case .badStatus(401), .badStatus(403):
+            return "Spoonacular rejected the API key."
+        case .badStatus(402):
+            return "The daily Spoonacular limit was reached. Try again tomorrow."
+        case .badStatus(let code):
+            return "Spoonacular returned an error (\(code))."
+        }
+    }
+}
+
 // MARK: - Spoonacular API Client
 class SpoonacularService {
     static let shared = SpoonacularService()
-    
-    // ⚠️ Replace with your actual Spoonacular API Key
-    private let apiKey = "46d5c2aabcb6422a9b17a9df13090eb2"
+
     private let baseURL = "https://api.spoonacular.com/recipes"
-    
+
+    /// The key comes from the gitignored Secrets.swift and is sent as a header, so it never appears in a URL or log.
+    private func makeRequest(path: String, queryItems: [URLQueryItem]) throws -> URLRequest {
+        let key = Secrets.spoonacularApiKey
+        guard !key.isEmpty, !key.hasPrefix("YOUR_") else { throw SpoonacularError.missingAPIKey }
+
+        guard var components = URLComponents(string: "\(baseURL)\(path)") else { throw URLError(.badURL) }
+        components.queryItems = queryItems
+        guard let url = components.url else { throw URLError(.badURL) }
+
+        var request = URLRequest(url: url)
+        request.setValue(key, forHTTPHeaderField: "x-api-key")
+        return request
+    }
+
+    private func send(_ request: URLRequest) async throws -> Data {
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let http = response as? HTTPURLResponse else { throw URLError(.badServerResponse) }
+        guard http.statusCode == 200 else { throw SpoonacularError.badStatus(http.statusCode) }
+        return data
+    }
+
+    /// Keeps letters, digits, spaces and hyphens so names like "mac & cheese" can't break the query.
+    static func sanitized(_ name: String) -> String {
+        let allowed = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: " -"))
+        let cleaned = String(name.unicodeScalars.filter { allowed.contains($0) })
+        return cleaned
+            .split(separator: " ", omittingEmptySubsequences: true)
+            .joined(separator: " ")
+            .lowercased()
+    }
+
     /// Finds recipes using available ingredients from fridge
     func searchByIngredients(_ ingredients: [String], number: Int = 10) async throws -> [SpoonacularRecipe] {
-        guard !ingredients.isEmpty else { return [] }
-        
-        let ingredientString = ingredients.joined(separator: ",").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let urlString = "\(baseURL)/findByIngredients?ingredients=\(ingredientString)&number=\(number)&ranking=1&apiKey=\(apiKey)"
-        
-        guard let url = URL(string: urlString) else {
-            throw URLError(.badURL)
-        }
-        
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw URLError(.badServerResponse)
-        }
-        
-        return try JSONDecoder().decode([SpoonacularRecipe].self, from: data)
+        let names = ingredients.map(SpoonacularService.sanitized).filter { !$0.isEmpty }
+        guard !names.isEmpty else { return [] }
+
+        let request = try makeRequest(path: "/findByIngredients", queryItems: [
+            URLQueryItem(name: "ingredients", value: names.joined(separator: ",")),
+            URLQueryItem(name: "number", value: String(number)),
+            URLQueryItem(name: "ranking", value: "1")
+        ])
+        return try JSONDecoder().decode([SpoonacularRecipe].self, from: try await send(request))
     }
-    
+
     /// Fetches step-by-step instructions when a user taps a recipe card
     func fetchRecipeDetail(id: Int) async throws -> SpoonacularDetail {
-        let urlString = "\(baseURL)/\(id)/information?includeNutrition=false&apiKey=\(apiKey)"
-        
-        guard let url = URL(string: urlString) else {
-            throw URLError(.badURL)
-        }
-        
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw URLError(.badServerResponse)
-        }
-        
-        return try JSONDecoder().decode(SpoonacularDetail.self, from: data)
+        let request = try makeRequest(path: "/\(id)/information", queryItems: [
+            URLQueryItem(name: "includeNutrition", value: "false")
+        ])
+        return try JSONDecoder().decode(SpoonacularDetail.self, from: try await send(request))
     }
 }

@@ -17,6 +17,7 @@ struct FoodItemListView: View {
             let matchesCategory = selectedCategory == nil || item.category == selectedCategory?.rawValue
             return matchesSearch && matchesCategory
         }
+        .sorted { ($0.expiryDate ?? .distantFuture) < ($1.expiryDate ?? .distantFuture) }
     }
 
     var body: some View {
@@ -101,6 +102,7 @@ struct FoodItemCardView: View {
         switch item.statusColorName {
         case "red": return .red
         case "orange": return .orange
+        case "gray": return .gray
         default: return .green
         }
     }

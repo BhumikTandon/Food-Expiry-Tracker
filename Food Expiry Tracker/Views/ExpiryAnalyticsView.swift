@@ -13,9 +13,15 @@ import SwiftUI
 struct ExpiryAnalyticsView: View {
     @EnvironmentObject private var manager: FoodItemManager
 
-    var expiredCount: Int { manager.foodItems.filter { $0.daysUntilExpiry < 0 }.count }
-    var expiringSoonCount: Int { manager.foodItems.filter { $0.daysUntilExpiry >= 0 && $0.daysUntilExpiry <= 3 }.count }
-    var freshCount: Int { manager.foodItems.filter { $0.daysUntilExpiry > 3 }.count }
+    private func items(where matches: (ExpiryStatus) -> Bool) -> [FoodItem] {
+        manager.foodItems
+            .filter { matches($0.status()) }
+            .sorted { ($0.expiryDate ?? .distantFuture) < ($1.expiryDate ?? .distantFuture) }
+    }
+
+    var expiredCount: Int { items { $0 == .expired }.count }
+    var expiringSoonCount: Int { items { $0 == .expiringSoon }.count }
+    var freshCount: Int { items { $0 == .fresh }.count }
 
     var body: some View {
         NavigationStack {
@@ -30,7 +36,7 @@ struct ExpiryAnalyticsView: View {
                     .padding(.horizontal)
 
                     // Urgent Section (0 - 3 Days)
-                    let urgentItems = manager.foodItems.filter { $0.daysUntilExpiry <= 3 }
+                    let urgentItems = items { $0 == .expired || $0 == .expiringSoon }
                     if !urgentItems.isEmpty {
                         VStack(alignment: .leading, spacing: 12) {
                             Text("Urgent (Expiring Soon)")
@@ -45,7 +51,7 @@ struct ExpiryAnalyticsView: View {
                     }
 
                     // Fresh Section (>3 Days)
-                    let freshItems = manager.foodItems.filter { $0.daysUntilExpiry > 3 }
+                    let freshItems = items { $0 == .fresh }
                     if !freshItems.isEmpty {
                         VStack(alignment: .leading, spacing: 12) {
                             Text("Fresh Items")
@@ -53,6 +59,21 @@ struct ExpiryAnalyticsView: View {
                                 .foregroundColor(.green)
 
                             ForEach(freshItems, id: \.objectId) { item in
+                                FoodItemCardView(item: item)
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+
+                    // Items saved without an expiry date
+                    let undatedItems = items { $0 == .noDate }
+                    if !undatedItems.isEmpty {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("No Expiry Date")
+                                .font(.headline)
+                                .foregroundColor(.gray)
+
+                            ForEach(undatedItems, id: \.objectId) { item in
                                 FoodItemCardView(item: item)
                             }
                         }
